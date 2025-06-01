@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "How do I AI this?",
+  "version": "1.0.0",
+  "description": "A minimalist Chrome extension that encourages AI adoption by prompting users to consider AI solutions",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/assets/logos/*.png", "src/assets/logos/*.svg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';",
+    "content_scripts": "script-src 'self'; img-src 'self' data: https://*.google.com https://www.google.com; object-src 'self';"
+  }
+} 

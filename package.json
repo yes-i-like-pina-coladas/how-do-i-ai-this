@@ -1,0 +1,62 @@
+{
+  "name": "how-do-i-ai-this",
+  "version": "1.0.0",
+  "description": "A minimalist Chrome extension that encourages AI adoption by prompting users to consider AI solutions",
+  "type": "module",
+  "author": "yes-i-like-pina-coladas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yes-i-like-pina-coladas/how-do-i-ai-this"
+  },
+  "keywords": [
+    "chrome-extension",
+    "ai",
+    "productivity",
+    "react",
+    "typescript",
+    "tailwindcss"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "echo 'Build completed successfully!'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7",
+    "lucide-react": "^0.294.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/chrome": "^0.0.251",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "@crxjs/vite-plugin": "^2.0.0-beta.21",
+    "husky": "^8.0.3",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
