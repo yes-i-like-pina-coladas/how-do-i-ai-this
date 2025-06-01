@@ -13,12 +13,5 @@ export default defineConfig({
     alias: {
       '@': '/src'
     }
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        popup: 'src/popup/index.html'
-      }
-    }
   }
 }) 

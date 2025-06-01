@@ -4,9 +4,7 @@
   "version": "1.0.0",
   "description": "A minimalist Chrome extension that encourages AI adoption by prompting users to consider AI solutions",
   "permissions": [
-    "storage",
-    "scripting",
-    "activeTab"
+    "storage"
   ],
   "action": {
     "default_popup": "src/popup/index.html",
@@ -30,7 +28,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["src/assets/logos/*.png", "src/assets/logos/*.svg"],
+      "resources": ["assets/*"],
       "matches": ["<all_urls>"]
     }
   ],
